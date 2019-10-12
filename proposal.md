@@ -36,7 +36,8 @@ I am currently a sophomore student of IIT BHU pursuing mathematical sciences. Th
 
 ## Timeline of Deliverables: 
 ### Week 1 - 3
- * Implement cancel and apart algorithm
+ * Implement cancel and apart algorithm.
+ 
 This is how both algorithms will be implemented.
 1. Implement cancel from SymPy and write test cases also
 2. Implement div.
@@ -48,6 +49,7 @@ Apart - Decomposes a univariate rational function f with integer coefficients in
 ### Week 4
 
 * Implement square free decomposition
+
 The fast algorithm of Yun for computing square–free decompositions in domains of characteristic zero for multivariate polynomials. The cost of computing square–free decomposition is equivalent to the computation of the greatest common divisor of f and its derivative. This is dependent on the GCD algorithm.
 Link for Yun Algorithm 
 Working principle
@@ -85,7 +87,8 @@ The same is also implemented in groebner() of SymPy here.
 
 ### Week 8 & 9
 
-Implement solving system using Groebner basis
+* Implement solving system using Groebner basis
+
 It should be noted that for linear system of polynomials, this reduces to Gauss-algorithm and hence can be applied to solve that system. In SymPy, it is noted that solving using this method is faster that the Gauss-Jordan implemented using solve()
 ```
 >>> F = [x + 5*y - 2, -3*x + 6*y - 15]
