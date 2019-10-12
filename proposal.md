@@ -47,35 +47,38 @@ Apart - Decomposes a univariate rational function f with integer coefficients in
     	 
 ### Week 4
 
-Implement square free decomposition
+* Implement square free decomposition
 The fast algorithm of Yun for computing square–free decompositions in domains of characteristic zero for multivariate polynomials. The cost of computing square–free decomposition is equivalent to the computation of the greatest common divisor of f and its derivative. This is dependent on the GCD algorithm.
 Link for Yun Algorithm 
 Working principle
+```
 a_0 = gcd(f, f');   b_1 = f/a_0;   c_1 = f'/a_0;   d_1 = c_1 - b_1';   i = 1;
 iterate until b = 1
 a_i = gcd(b_i, d_i);   b_(i+1) = b_i/a_i;   c_(i+1) = d_i/a_i;   i = i + 1;    d_i = c_i - b_(i+1)';
 return a_1, a_2, ... ,a_(i-1)
+```
 ### Week  5 -7
 
 • Implement groebner basis
-Check for Groebner Basis
+Check for Groebner Basis.
 Given a set of polynomials G, one can check if G is a Groebner basis in a finite number of steps using the generalized division algorithm implemented.
 Given two polynomials f and g, to test whether they form Grobner basis.
-1 Find s_poly(defined below) of f and g.
-2 Find remainder of s_poly with respect to [f, g] using reduced().
-3 If zero, then f and g form groebner basis.
-4 If not, then [f, g, s_poly(f, g)] form groebner basis which can be shown by taking s_poly pairwise and computing its remainder with the extended array and all turn out to be zero.
+1. Find s_poly(defined below) of f and g.
+2. Find remainder of s_poly with respect to [f, g] using reduced().
+3. If zero, then f and g form groebner basis.
+4. If not, then [f, g, s_poly(f, g)] form groebner basis which can be shown by taking s_poly pairwise and computing its remainder with the extended array and all turn out to be zero.
 This can be extended for larger arrays.
-Algorithm
+* Algorithm
 Methods to be implemented for the algorithm:
 1. LM(): Returns the leading monomial.
 2. LT(): Returns the leading term.
 3. Also needed will be lcm() and expand().
 We then define the notion of s_poly.
+```
 Polynomial s_poly(const Polynomial a, const Polynomial b){
 	return expand(lcm(LM(f), LM(g))*(1/LT(f)*f - 1/LT(g)*g));
 }
-
+```
 Note the importance of introducing ordering of monomials in computation of s_poly.
 Once the above methods are implemented then improved version of Buchberger's algorithm will be done from here.
 The same is also implemented in groebner() of SymPy here.
@@ -84,12 +87,13 @@ The same is also implemented in groebner() of SymPy here.
 
 Implement solving system using Groebner basis
 It should be noted that for linear system of polynomials, this reduces to Gauss-algorithm and hence can be applied to solve that system. In SymPy, it is noted that solving using this method is faster that the Gauss-Jordan implemented using solve()
+```
 >>> F = [x + 5*y - 2, -3*x + 6*y - 15]
 >>> %timeit groebner(F, x, y)
 100 loops, best of 3: 5.15 ms per loop
 >>> %timeit solve(F, x, y)
 10 loops, best of 3: 22.7 ms per loop
-
+```
 
 # Week 10 - End
 Complete left overs and Add documentation and improvement for multivariate starts.
