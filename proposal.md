@@ -25,7 +25,7 @@ There are many areas in the field of mathematics where SymPy is doing a much bet
 
  Handling and manipulating polynomials are used widely in the sciences, such as engineering, physics, and economics, as well as in studies of mathematics. Mathematical descriptions of extracting common factors or distributing factors or solving polynomials using groebner basis are very good algorithms.
 
-Currently, SymEngine have polynomial module which is lacking many many functionalities and is also dependent on other libraries such as Flint, Piranha etc. This project will help to create its own fast methods for handling polynomial.
+Currently, SymEngine have polynomial module which is lacking many many functionalities and the methods that will be implemented in this project will use external dependencies to save time and maintain performance. In near future if it will have its own methods then these methods will be deprecated.
 
 
 ## Amount Requested: 3000$
