@@ -7,11 +7,12 @@ Currently, SymEngine (part of SymPy) has polynomial module which supports Univar
 ## Description of Proposal: No more than 750 words (4,500 characters max)
 
 As the existing Polynomial module of SymEngine is easily extensible and currently lacking  some important manipulation functionalities. The idea is to implement most of the polynomial manipulation functionalities such as apart, cancel, square free decomposition, and groebner basis etc.  The idea is to make the polynomial module of SymEngine more functional and efficient.
+**Use of extrenal librarires will be there wherever it will necessary**.
 	For my project, I plan to implement the following algorithms for polynomial module:
 * Implement cancel() - Cancels common factors from the numerator and denominator of a rational function. Depends on the GCD algorithm.
 * Implement apart() - Decomposes a univariate rational function f with integer coefficients into partial fractions. Algorithm of Bronstein's full partial fraction decomposition algorithm will be implemented.
 * Implement square free decomposition - The fast algorithm of Yun for computing square–free decompositions in domains of characteristic zero for multivariate polynomials. The cost of computing square–free decomposition is equivalent to the computation of the greatest common divisor of f and its derivative. This is dependent on the GCD algorithm.
-* Implement Groebner Basis - The method of Groebner bases is a powerful technique for solving problems in commutative algebra. Groebner bases provide a uniform approach for solving problems that can be expressed in terms of systems of multivariate polynomial equations. It has many practical applications.The algorithm used for computation is Buchberger's algorithm.
+* Implement Groebner Basis - The method of Groebner bases is a powerful technique for solving problems in commutative algebra. Pure description of implementation is [here](https://mattpap.github.io/masters-thesis/html/src/groebner.html). Groebner bases provide a uniform approach for solving problems that can be expressed in terms of systems of multivariate polynomial equations. It has many practical applications.The algorithm used for computation is Buchberger's algorithm.
 * Implement Polynomial roots with system of polynomials with help of implemented Groebners basis and many more. 
 * If time persists then improvement of multivariate polynomial will start after discussing with Ondrej and Isuru.
 
@@ -62,6 +63,8 @@ return a_1, a_2, ... ,a_(i-1)
 ### Week  5 -7
 
 • Implement groebner basis
+
+After going through this [link]()https://mattpap.github.io/masters-thesis/html/src/groebner.html Grobner basis is easy to implement.
 Check for Groebner Basis.
 Given a set of polynomials G, one can check if G is a Groebner basis in a finite number of steps using the generalized division algorithm implemented.
 Given two polynomials f and g, to test whether they form Grobner basis.
