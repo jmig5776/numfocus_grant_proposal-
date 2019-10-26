@@ -9,8 +9,8 @@ Currently, SymEngine (part of SymPy) has polynomial module which supports Univar
 As the existing Polynomial module of SymEngine is easily extensible and currently lacking  some important manipulation functionalities. The idea is to implement most of the polynomial manipulation functionalities such as apart, cancel, square free decomposition, and groebner basis etc.  The idea is to make the polynomial module of SymEngine more functional and efficient.
 **Use of extrenal librarires will be there wherever it will necessary**.
 	For my project, I plan to implement the following algorithms for polynomial module:
-* Implement cancel() - Cancels common factors from the numerator and denominator of a rational function. Depends on the GCD algorithm.
-* Implement apart() - Decomposes a univariate rational function f with integer coefficients into partial fractions. Algorithm of Bronstein's full partial fraction decomposition algorithm will be implemented.
+* Implement cancel() - Cancels common factors from the numerator and denominator of a rational function. Depends on the GCD algorithm. Althought there is exisiting pull request is started to complete it [#1620](https://github.com/symengine/symengine/pull/1620).
+* Implement apart() - Decomposes a univariate rational function f with integer coefficients into partial fractions. Algorithm of Bronstein's full partial fraction decomposition algorithm will be implemented. This is also been started to implement on [#1617](https://github.com/symengine/symengine/pull/1617).
 * Implement square free decomposition - The fast algorithm of Yun for computing square–free decompositions in domains of characteristic zero for multivariate polynomials. The cost of computing square–free decomposition is equivalent to the computation of the greatest common divisor of f and its derivative. This is dependent on the GCD algorithm.
 * Implement Groebner Basis - The method of Groebner bases is a powerful technique for solving problems in commutative algebra. Pure description of implementation is [here](https://mattpap.github.io/masters-thesis/html/src/groebner.html). Groebner bases provide a uniform approach for solving problems that can be expressed in terms of systems of multivariate polynomial equations. It has many practical applications.The algorithm used for computation is Buchberger's algorithm.
 * Implement Polynomial roots with system of polynomials with help of implemented Groebners basis and many more. 
@@ -46,6 +46,9 @@ This is how both algorithms will be implemented.
 Both the cancel and apart will be implemented with the reference from SymPy and then these will be designed and assembled in Basic.
 Cancel - Cancels common factors from the numerator and denominator of a rational function. Depends on the GCD algorithm.
 Apart - Decomposes a univariate rational function f with integer coefficients into partial fractions. Algorithm of Bronstein's full partial fraction decomposition algorithm will be implemented and test cases will be written.
+
+Although the implementation of cancel and apart is being started in these Pull requests.
+[#1620](https://github.com/symengine/symengine/pull/1620), [#1617](https://github.com/symengine/symengine/pull/1617).
     	 
 ### Week 4
 
