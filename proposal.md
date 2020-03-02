@@ -6,6 +6,7 @@ Currently, SymEngine (part of SymPy) has a polynomial module which supports Univ
 
 ## About Me
 Name - Jogi Miglani
+
 Email - jmig5776@gmail.com
 
 Github - https://github.com/jmig5776
