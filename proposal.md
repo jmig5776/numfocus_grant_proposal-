@@ -6,10 +6,12 @@ Currently, SymEngine (part of SymPy) has a polynomial module which supports Univ
 
 ## About Me
 Name - Jogi Miglani
-
 Email - jmig5776@gmail.com
+
 Github - https://github.com/jmig5776
+
 University - Indian Institute Of Technology(BHU), Varanasi
+
 Major - Mathematics and Computing
 
 I have been contributing to SymPy for past two years.I am a core member of SymPy and had successfully completed Google Summer Of Code 2019 as a student. And I am now currently mentor for Google Summer Of Code 2020 of SymPy. 
